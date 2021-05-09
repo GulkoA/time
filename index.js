@@ -28,6 +28,7 @@ muteButton.onclick = () => {
 
 var iterations = 0
 setInterval(() => {
+    document.getElementById("time").textContent = Math.floor(Date.now() / 1000)
     if (!muted)
     {
         if (iterations % 2 == 0)
@@ -35,7 +36,6 @@ setInterval(() => {
         else
             pickRandom(ticksB).play()
     }
-    document.getElementById("time").textContent = Math.floor(Date.now() / 1000)
     iterations++
 }, 1000)
 
